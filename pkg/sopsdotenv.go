@@ -8,7 +8,7 @@ import(
 type Env map[string]string
 
 func LoadFile(path string) (Env, error) {
-	envBytes, err := decrypt.File(path)
+	envBytes, err := decrypt.File(path, "dotenv")
 	if err != nil {
 		panic(err)
 	}
